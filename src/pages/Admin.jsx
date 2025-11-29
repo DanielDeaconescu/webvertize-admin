@@ -53,6 +53,7 @@ export default function Admin() {
           <p>
             <strong>IP:</strong> {e.ip}
           </p>
+          <button className="btn btn-primary">test</button>
         </div>
       ))}
     </div>
