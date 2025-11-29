@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Navigation from '../components/Navigation';
 
 export default function Admin() {
   const [entries, setEntries] = useState([]);
@@ -54,6 +55,7 @@ export default function Admin() {
 
   return (
     <div style={{ padding: 20 }}>
+      <Navigation />
       <h2>Form Submissions</h2>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
