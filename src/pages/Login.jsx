@@ -10,6 +10,10 @@ const StyledLogin = styled.div`
   align-items: center;
 `;
 
+const StyledForm = styled.form`
+  width: 300px;
+`;
+
 function Login() {
   const [username, setU] = useState('');
   const [password, setP] = useState('');
@@ -39,9 +43,11 @@ function Login() {
 
   return (
     <StyledLogin>
-      <Logo />
+      <div className="mb-3">
+        <Logo />
+      </div>
       <h2 className="mb-4">Admin Login</h2>
-      <form onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="username" className="form-label">
             Username
@@ -67,7 +73,7 @@ function Login() {
         <button type="submit" className="btn btn-primary w-100">
           Login
         </button>
-      </form>
+      </StyledForm>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </StyledLogin>
   );
